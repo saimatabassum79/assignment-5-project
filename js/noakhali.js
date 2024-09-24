@@ -1,46 +1,20 @@
-const foodAtNoakhaliSubmiteBtn = document.getElementById(
-    "foodAtNoakhaliSubmiteBtn"
-  );
-  
-  foodAtNoakhaliSubmiteBtn.addEventListener("click", (event) => {
+ document.getElementById("Noakhali-submit-btn").addEventListener("click", function (event) {
     event.preventDefault();
-    // flood at at Noakhali
-    const donationNoakhaliCampaniName =
-      document.getElementById("donation_name").innerText;
-    CommonFeatcher(
-      "doanteAmountOfNoakhali",
-      "floodAtNoakhaliDonateAmount",
-      donationNoakhaliCampaniName
+    const donationNoakhaliName = document.getElementById("donation-name").innerText;
+    CommonFeature("donate-of-noakhali","noakhali-amount",donationNoakhaliName
     );
   });
   
   // donation btn decler
-  const foodAtFeniSubmiteBtn = document.getElementById("foodAtFeniSubmiteBtn");
-  
-  foodAtFeniSubmiteBtn.addEventListener("click", (event) => {
+  document.getElementById("feni-submit-btn").addEventListener("click", function(event)  {
     event.preventDefault();
-    // flood at at feni cmapain name
-    const donationFeniCampaniName =
-      document.getElementById("feni_campani_name").innerText;
-  
-    CommonFeatcher(
-      "doanteAmountOfFeni",
-      "floodAtFeniDonateAmount",
-      donationFeniCampaniName
-    );
+    const feniName =document.getElementById("feni-name").innerText;
+    CommonFeature("donate-of-feni","feni-amount",feniName);
   });
   
   // donation btn decler
-  const AtQotaSubmiteBtn = document.getElementById("AtQotaSubmiteBtn");
-  
-  AtQotaSubmiteBtn.addEventListener("click", (event) => {
+   document.getElementById("quota-submit-btn").addEventListener("click", function(event) {
     event.preventDefault();
-    // flood at AtQuota cmapnai
-    const donationQuotaCampaniName =
-      document.getElementById("quota_campani_name").innerText;
-    CommonFeatcher(
-      "doanteAmountOfquota",
-      "AtQuateDonateAmount",
-      donationQuotaCampaniName
-    );
+    const quotaName =document.getElementById("quota-name").innerText;
+    CommonFeature( "donate-quota", "quota-amount", quotaName );
   });

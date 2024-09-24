@@ -1,20 +1,19 @@
+const donationBtn = document.getElementById("donation-btn");
+const historyBtn = document.getElementById("history-btn");
+const donationSection = document.getElementById("donation-section");
+const historySection = document.getElementById("history-section");
 
-const donationbtn = document.getElementById("donationbtn");
-const historybtn = document.getElementById("historybtn");
-const donationSection = document.getElementById("donationSection");
-const historySection = document.getElementById("historySection");
-
-donationbtn.addEventListener("click", () => {
-  donationbtn.classList.add("btn-success");
-  historybtn.classList.remove("btn-success");
+donationBtn.addEventListener("click", function() {
+  donationBtn.classList.add("btn-success");
+  historyBtn.classList.remove("btn-success");
 
   donationSection.classList.remove("hidden");
-  historySection.classList.add("hidden");
+  historySection.classList.add("hidden")                                                     ;
 });
 
-historybtn.addEventListener("click", () => {
-  donationbtn.classList.remove("btn-success");
-  historybtn.classList.add("btn-success");
+historyBtn.addEventListener("click", function() {
+  donationBtn.classList.remove("btn-success");
+  historyBtn.classList.add("btn-success");
 
   historySection.classList.remove("hidden");
   donationSection.classList.add("hidden");
