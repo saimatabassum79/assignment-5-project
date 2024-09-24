@@ -14,7 +14,7 @@
              
           <div class="navbar lg:w-4/5 w-11/12 mx-auto h-[80px]">
             <div class="navbar-start">
-                <button class="btn btn-accent bg-[#B4F461] border-none">Blog</button>
+                <button onclick="blogPage()" class="btn btn-success btn-accent bg-[#B4F461] border-none">Blog</button>
               
             </div>
             <div class="navbar-center hidden lg:flex">
@@ -26,7 +26,7 @@
             <div class="navbar-end">
              <div class="flex gap-2" >
                 <img src="assets/coin.png" alt="" srcset="">
-                <h2 id="mainwallet" class="font-semibold" >5500</h2>
+                <h2 id="totalDonationNeed" class="font-semibold" >5500</h2>
                 <h3  class="font-semibold"> BDT</h3>
              </div>
             </div>
@@ -39,17 +39,16 @@
 
         <div class=" mx-auto mt-28 text-center ">
            
-            <button id="btnDone" class="btn hover:bg-[#B4F461] ">Donation</button>
-            <button id="btn-history" class="btn  hover:bg-[#B4F461] ">History</button>
+            <button id="donationbtn" class="btn btn-success hover:bg-[#B4F461] ">Donation</button>
+            <button id="historybtn" class="btn  hover:bg-[#B4F461] ">History</button>
         </div>
-        <!-- history section start -->
-        <div id="history-container" class="hidden w-[70%] mx-auto mt-10 border-zinc-100 bg-slate-200 rounded-md p-3">
+     
          
         </div>
        <!-- card section -->
         <!-- card-1 -->
-        <section id="section-1">
-          <div  class="mt-5"></div>
+        <section id="donationSection">
+          <div  class="mt-5">
             <div class="card card-side flex flex-col lg:flex-row bg-base-100 border border-1">
                 <figure class="  ">
                   <img class="lg:h-[320px] h-[240px] w-[550px] lg:w-[2150px] m-5 rounded-xl  lg:ml-11"
@@ -59,18 +58,16 @@
                 <div class="card-body text-center lg:text-left">
                      <button class="btn btn-md w-[120px] ml-[100px] lg:ml-[0px] flex flex-row ">
                         <img class="h-[20px] w-[20px]" src="assets/coin.png" alt="" srcset="">
-                        <p id="valueOne">0</p> <span>BDT</span></button>
-                  <h2 class="card-title font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <p id="floodAtNoakhaliDonateAmount">0</p> <span>BDT</span></button>
+                  <h2 id="donation_name" class="card-title font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
                   <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-               
-                  <input id="donate-input-one" type="text" placeholder="Write Donation Amount" class="input input-bordered lg:w-[500px] " />
-                  <button id="donate-btn-1" class="btn btn-wide w-[325px] lg:w-[500px] bg-[#B4F461] font-bold">Donate Now</button>
+                 <p class="warning_message"></p>
+                  <input id="doanteAmountOfNoakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered lg:w-[500px] " />
+                  <button id="foodAtNoakhaliSubmiteBtn" class="btn btn-wide w-[325px] lg:w-[500px] bg-[#B4F461] font-bold">Donate Now</button>
                 </div>
               </div>
         </div>
-        </section>
         <!-- card-2 -->
-      <section id="section-2">
         <div class="mt-5">
           <div class="card card-side flex flex-col lg:flex-row bg-base-100 border border-1">
               <figure class="  ">
@@ -81,48 +78,76 @@
               <div class="card-body text-center lg:text-left">
                    <button class="btn btn-md ml-[100px] lg:ml-[0px] w-[120px] flex flex-row ">
                       <img class="h-[20px] w-[20px]" src="assets/coin.png" alt="" srcset="">
-                      <p id="valueTwo">600</p> <span>BDT</span></button>
-                <h2 class="card-title font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                      <p id="floodAtFeniDonateAmount">600</p> <span>BDT</span></button>
+                <h2 id="feni_campani_name" class="card-title font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
                 <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                 <!-- <div class="card-actions justify-end">
                   <button class="btn btn-primary">Watch</button>
                 </div> -->
-                <input id="donate-input-two" type="text" placeholder="Write Donation Amount" class="input input-bordered lg:w-[500px] " />
-                <button id="donate-btn-2" class="btn btn-wide w-[325px] lg:w-[500px] bg-[#B4F461] font-bold">Donate Now</button>
+                <input id="doanteAmountOfFeni" type="text" placeholder="Write Donation Amount" class="input input-bordered lg:w-[500px] " />
+                <button id="foodAtFeniSubmiteBtn" class="btn btn-success btn-wide w-[325px] lg:w-[500px] bg-[#B4F461] font-bold">Donate Now</button>
               </div>
             </div>
       </div>
-      </section>
-        <!-- card-3 -->
-        <section id="section-3">
-          <div class="mt-5"></div>
-            <div class="card card-side flex flex-col lg:flex-row bg-base-100 border border-1">
-                <figure class="  ">
-                  <img class="lg:h-[320px] h-[240px] w-[550px] lg:w-[2150px] m-5 rounded-xl  lg:ml-6"
-                    src="assets/quota-protest.png"
-                    alt="Movie" />
-                </figure>
-                <div class="card-body text-center lg:text-left">
-                     <button class="btn btn-md w-[130px] ml-[100px] lg:ml-[0px] flex flex-row ">
-                        <img class="h-[20px] w-[20px]" src="assets/coin.png" alt="" srcset="">
-                        <p id="valueThree">2400 </p><span>
-                          BDT
-                        </span></button>
-                  <h2 class="card-title font-bold">Aid for Injured in the Quota Movement</h2>
-                  <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
-                  <!-- <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Watch</button>
-                  </div> -->
-                  <input id="donate-input-three" type="text" placeholder="Write Donation Amount" class="input input-bordered lg:w-[500px] " />
-                  <button id="donate-btn-3" class="btn btn-wide w-[325px] lg:w-[500px] bg-[#B4F461] font-bold">Donate Now</button>
-                </div>
-              </div>
-        </div>
+      <!-- card-3 -->
+      <div class="mt-5">
+        <div class="card card-side flex flex-col lg:flex-row bg-base-100 border border-1">
+            <figure class="  ">
+              <img class="lg:h-[320px] h-[240px] w-[550px] lg:w-[2150px] m-5 rounded-xl  lg:ml-6"
+                src="assets/quota-protest.png"
+                alt="Movie" />
+            </figure>
+            <div class="card-body text-center lg:text-left">
+                 <button class="btn btn-md w-[130px] ml-[100px] lg:ml-[0px] flex flex-row ">
+                    <img class="h-[20px] w-[20px]" src="assets/coin.png" alt="" srcset="">
+                    <p id="AtQuateDonateAmount">2400 </p><span>
+                      BDT
+                    </span></button>
+              <h2 id="quota_campani_name" class="card-title font-bold">Aid for Injured in the Quota Movement</h2>
+              <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+             
+              <input id="doanteAmountOfquota" type="text" placeholder="Write Donation Amount" class="input input-bordered lg:w-[500px] " />
+              <button id="AtQotaSubmiteBtn" class="btn btn-success btn-wide w-[325px] lg:w-[500px] bg-[#B4F461] font-bold">Donate Now</button>
+            </div>
+          </div>
+    </div>
+        </section>
+      
+        
+      
+         <!-- donation dilalog prop up box  -->
+         <dialog id="modal_dialog_box" class="modal">
+          <div class="modal-box text-center">
+            <h3 class="text-2xl font-bold">Thank you for your donation!</h3>
+            <div class="py-4">
+              <img
+                class="w-9 h-9 mx-auto"
+                src="assets/coin.png"
+                alt="donation coin"
+              />
+            </div>
+            <p class="text-lg font-semibold">You have donation Humankind</p>
+            <h3 class="text-5xl font-bold text-green-600">success</h3>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn btn-success">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        <!-- history section -->
+        <section id="historySection" class="hidden">
+          <div class="px-48 py-[10px]" id="donationDataHistory"></div>
         </section>
      </main>
      <footer class="bg-[#F9F7F3] h-[90px] mt-5">
 
      </footer>
+     <script src="js/noakhali.js"></script>
    
+ 
+   <script src="js/commonFunction.js"></script>
+   <script src="js/btnSection.js"></script>
+   <script src="js/blogBtn.js"></script>
 </body>
 </html>
