@@ -4,16 +4,16 @@ const donationSection = document.getElementById("donation-section");
 const historySection = document.getElementById("history-section");
 
 donationBtn.addEventListener("click", function() {
-  donationBtn.classList.add("btn-success");
-  historyBtn.classList.remove("btn-success");
+  donationBtn.classList.add("btn-warning");
+  historyBtn.classList.remove("btn-warning");
 
   donationSection.classList.remove("hidden");
   historySection.classList.add("hidden")                                                     ;
 });
 
 historyBtn.addEventListener("click", function() {
-  donationBtn.classList.remove("btn-success");
-  historyBtn.classList.add("btn-success");
+  donationBtn.classList.remove("btn-warning");
+  historyBtn.classList.add("btn-warning");
 
   historySection.classList.remove("hidden");
   donationSection.classList.add("hidden");

@@ -1,3 +1,4 @@
+//  donation noakhali btn submit
  document.getElementById("Noakhali-submit-btn").addEventListener("click", function (event) {
     event.preventDefault();
     const donationNoakhaliName = document.getElementById("donation-name").innerText;
@@ -5,14 +6,14 @@
     );
   });
   
-  // donation btn decler
+  // donation  feni btn submit
   document.getElementById("feni-submit-btn").addEventListener("click", function(event)  {
     event.preventDefault();
     const feniName =document.getElementById("feni-name").innerText;
     CommonFeature("donate-of-feni","feni-amount",feniName);
   });
   
-  // donation btn decler
+  // donation quota btn submit
    document.getElementById("quota-submit-btn").addEventListener("click", function(event) {
     event.preventDefault();
     const quotaName =document.getElementById("quota-name").innerText;
